@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "continuous-vector-lowdim-sac-mbpo-mlpdreamer"
+version = "0.1.0"
+
+description = "low-dim continuous control: SAC, MBPO, MLP-style dreamer. school project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gymnasium>=0.29",
+    "numpy>=1.24",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+
+wandb = ["wandb"]
+
+[tool.setuptools]
+packages = ["sac", "mbpo", "mlp_dreamer"]
